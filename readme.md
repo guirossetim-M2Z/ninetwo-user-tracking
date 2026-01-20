@@ -21,11 +21,11 @@ Facilita a implementação do **Google Tag Manager (GTM)** utilizando **Delegaç
 ## 📦 Instalação
 
 ```bash
-npm install ninetwo_user_tracking
+npm install ninetwo-user-tracking
 # ou
-yarn add ninetwo_user_tracking
+yarn add ninetwo-user-tracking
 # ou
-pnpm add ninetwo_user_tracking
+pnpm add ninetwo-user-tracking
 
 ```
 
@@ -40,7 +40,7 @@ Para evitar erros de hidratação e garantir que o contexto funcione, utilize o 
 ```tsx
 'use client';
 
-import { TrackingProvider } from 'ninetwo_user_tracking';
+import { TrackingProvider } from 'ninetwo-user-tracking';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -111,7 +111,7 @@ O script utiliza delegação de eventos, garantindo que cliques em filhos (ex: �
 Use o componente `<TrackView>` para disparar um evento quando um elemento entrar na tela.
 
 ```tsx
-import { TrackView } from 'ninetwo_user_tracking';
+import { TrackView } from 'ninetwo-user-tracking';
 
 export default function BannerPromocional() {
   return (
