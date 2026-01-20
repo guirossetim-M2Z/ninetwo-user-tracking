@@ -4,7 +4,7 @@ A lógica será:
 
 1. Quando o elemento entra na tela: Dispara o evento de **View** (imediato) e inicia um **Timer** de 5 segundos.
 2. Se o usuário sair da tela antes dos 5s: O timer é cancelado.
-3. Se o usuário ficar 5s: Dispara o evento `_read_confirmation`.
+3. Se o usuário ficar 5s: Dispara o evento `read_confirmation`.
 
 ### 1. Código Atualizado: `src/components/TrackView.tsx`
 
@@ -206,7 +206,7 @@ Adicione os atributos `data-nt-ut-*` ao elemento interativo.
 ## 👁️ Rastreamento de Visualização e Leitura (View/Read)
 
 Use o componente `<TrackView>` para monitorar impressões.
-**Novidade:** Se o usuário permanecer com o elemento visível por 5 segundos (padrão), um segundo evento `_read_confirmation` será disparado.
+**Novidade:** Se o usuário permanecer com o elemento visível por 5 segundos (padrão), um segundo evento `read_confirmation` será disparado.
 
 ```tsx
 import { TrackView } from 'ninetwo_user_tracking';
@@ -240,7 +240,7 @@ Neste exemplo acima, dois eventos serão enviados ao DataLayer:
 
 
 2. **Após 5 segundos visível:**
-* event: `"article_view_read_confirmation"`
+* event: `"article_view"`
 * type: `"read_confirmation"`
 
 
@@ -255,7 +255,7 @@ O pacote envia os dados para `window.dataLayer`.
 
 ```javascript
 {
-  event: "article_view_read_confirmation",
+  event: "article_view",
   event_category: "blog",
   event_label: "como_aprender_react",
   event_type: "read_confirmation",
