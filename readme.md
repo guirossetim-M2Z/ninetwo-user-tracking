@@ -17,7 +17,7 @@ Facilita a implementação do **Google Tag Manager (GTM)** utilizando **Delegaç
 
 ## 📦 Instalação
 
-npm install ninetwo_user_tracking
+npm install ninetwo-user-tracking
 ---
 
 ## 🚀 Configuração (Next.js 13+ App Router)
