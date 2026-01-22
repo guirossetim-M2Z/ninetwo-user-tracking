@@ -56,9 +56,9 @@ export const TrackView: React.FC<TrackViewProps> = ({
         setHasTriggeredView(true);
       }
       if (!hasTriggeredRead) {
-        timerRef.current = window.setTimeout(() => {
+        timerRef.current = (window as any).setTimeout(() => {
           pushToDataLayer({
-            event: `${eventName}_read_confirmation`,
+            event: `read_confirmation`,
             category,
             label,
             type: 'read_confirmation',
