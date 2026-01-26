@@ -6,7 +6,7 @@ Facilita a implementação do **Google Tag Manager (GTM)** utilizando **Delegaç
 
 ## ✨ Integrações
 
-- 🚀 **RD Station:** Implementação de eventos para o botão flutuante do whatsapp.
+- 💉 **RD Station:** Implementação de eventos para o botão flutuante do whatsapp.
 ---
 ## ✨ Funcionalidades
 
