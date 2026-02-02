@@ -48,7 +48,7 @@ export const TrackView: React.FC<TrackViewProps> = ({
     if (typeof window !== 'undefined' && !('IntersectionObserver' in window)) {
       if (!hasTriggeredView) {
         pushToDataLayer({
-          event: eventName,
+          event: 'section_view',
           category,
           label,
           type: 'view',
@@ -81,7 +81,7 @@ export const TrackView: React.FC<TrackViewProps> = ({
           if (!hasTriggeredView) {
             if (debug) console.log('[TrackView] view ->', eventName, { category, label });
             pushToDataLayer({
-              event: eventName,
+              event: 'section_view',
               category,
               label,
               type: 'view',
@@ -94,7 +94,7 @@ export const TrackView: React.FC<TrackViewProps> = ({
             timerRef.current = window.setTimeout(() => {
               if (debug) console.log('[TrackView] read_confirmation ->', eventName, { category, label });
               pushToDataLayer({
-                event: `${eventName}_read_confirmation`,
+                event: `read_confirmation`,
                 category,
                 label,
                 type: 'read_confirmation',
